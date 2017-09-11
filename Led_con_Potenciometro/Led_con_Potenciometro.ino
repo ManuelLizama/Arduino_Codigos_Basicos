@@ -17,5 +17,5 @@ void loop() {
 
   Serial.print("brillo: "); 
   Serial.println(brillo);  //COMENTAR, ESTO ES SOLO PARA VER LAS SALIDAS
-  //analogWrite(led, brillo); //con valores de 0 a 255
+  analogWrite(led, brillo); //con valores de 0 a 255
   }
