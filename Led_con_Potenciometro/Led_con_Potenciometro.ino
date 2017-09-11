@@ -9,7 +9,13 @@ void setup() {
 }
  
 void loop() {
-  brillo = analogRead(pot) / 4; //con valores de 0 a 1023
-  Serial.print("brillo: "); Serial.println(brillo);  //COMENTAR, ESTO ES SOLO PARA VER LAS SALIDAS
-  analogWrite(led, brillo); //con valores de 0 a 255
-}
+  brillo = analogRead(pot); //con valores de 0 a 1023
+  digitalWrite(led,HIGH);
+  delay(brillo);
+  digitalWrite(led,LOW);
+  delay(brillo);
+
+  Serial.print("brillo: "); 
+  Serial.println(brillo);  //COMENTAR, ESTO ES SOLO PARA VER LAS SALIDAS
+  //analogWrite(led, brillo); //con valores de 0 a 255
+  }
